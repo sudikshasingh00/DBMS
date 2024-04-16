@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: <img src = "C:\Users\DELL\Desktop\download.jpg"; /* Specify the path to your image */
+      background-size: cover; /* Cover the entire background */
+      background-position: center; /* Center the background image */
+      background-repeat: no-repeat; /* Do not repeat the background image */
+      height: 100vh; /* Ensure the body takes up the full viewport height */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */}
+
+    header {
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Drop shadow effect */
+      background-image: <img src = "c:\Users\DELL\Desktop\download.jpg"; /* Specify the path to your image */
+      background-size: cover; /* Cover the entire background */
+      background-position: center; /* Center the background image */
+      background-repeat: no-repeat; /* Do not repeat the background image */
+    }
+    section {
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 5px;.,/4
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    }
+    h1, h2 {
+      color: #333;
+    }
+    footer {
+      text-align: center;
+      color: #fff;
+      padding: 10px;
+    }
+     
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Database Management System</h1>
+  </header>
+  <nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#Aplications">Aplications</a>
+    <a href="#Advantages">Advantages</a>
+    <a href="#sQl Learning Tips">sQl Learning Tips</a>
+    <a href="#psQl Learning Tips">psQl Learning Tips</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <main>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>A Database Management System (DBMS) is a software system that is designed to manage and organize data in a structured manner.
+         It allows users to create, modify, and query a database, as well as manage the security and access controls for that database.
+          DBMS provides an environment to store and retrieve the data in coinvent and efficient manner.
+        
+        
+     Key Features of DBMS
+    Data modeling: A DBMS provides tools for creating and modifying data models, which define the structure and relationships of the data in a database.
+     Data storage and retrieval: A DBMS is responsible for storing and retrieving data from the database, and can provide various methods for searching and querying the data.
+     Concurrency control: A DBMS provides mechanisms for controlling concurrent access to the database, to ensure that multiple users can access the data without conflicting with each other. 
+     Data integrity and security: A DBMS provides tools for enforcing data integrity and security constraints, such as constraints on the values of data and access controls that restrict who can access the data. 
+     Backup and recovery: A DBMS provides mechanisms for backing up and recovering the data in the event of a system failure. 
+    DBMS can be classified into two types: Relational Database Management System (RDBMS) and Non-Relational Database Management System (NoSQL or Non-SQL) RDBMS: Data is organized in the form of tables and each table has a set of rows and columns.
+    The data are related to each other through primary and foreign keys. NoSQL: Data is organized in the form of key-value pairs, documents, graphs, or column-based. 
+    These are designed to handle large-scale, high-performance scenarios. 
+     A database is a collection of interrelated data which helps in the efficient retrieval, insertion, and deletion of data from the database and organizes the data in the form of tables, views, schemas, reports, etc. 
+    For Example, a university database organizes the data about students, faculty, admin staff, etc. which helps in the efficient retrieval, insertion, and deletion of data from it.</p>
+    </section>
+    <section id="Aplications">
+      <h2>Aplications</h2>
+      <p>Applications of DBMS:
+       Enterprise Information: Sales, accounting, human resources, Manufacturing, online retailers.
+       Banking and Finance Sector: Banks maintaining the customer details, accounts, loans, banking transactions, credit card transactions.
+       Finance: Storing the information about sales and holdings, purchasing of financial stocks and bonds. 
+       University: Maintaining the information about student course enrolled information, student grades, staff roles. 
+       Airlines: Reservations and schedules. Telecommunications: Prepaid, postpaid bills maintance.
+       Paradigm Shift from File System to DBMS File System manages data using files on a hard disk. 
+       Users are allowed to create, delete, and update the files according to their requirements. 
+      Let us consider the example of file-based University Management System. 
+      Data of students is available to their respective Departments, Academics Section, Result Section, Accounts Section, Hostel Office, etc.
+      Some of the data is common for all sections like Roll No, Name, Father Name, Address, and Phone number of students but some data is available to a particular section only like Hostel allotment number which is a part of the hostel office.
+      Let us discuss the issues with this system: Redundancy of data: Data is said to be redundant if the same data is copied at many places. 
+      if a student wants to change their Phone number, he or she has to get it updated in various sections. Similarly, old records must be deleted from all sections representing that student. 
+      Inconsistency of Data: Data is said to be inconsistent if multiple copies of the same data do not match each other.
+      If the Phone number is different in Accounts Section and Academics Section, it will be inconsistent. 
+      Inconsistency may be because of typing errors or not updating all copies of the same data.
+       Difficult Data Access: A user should know the exact location of the file to access data, so the process is very cumbersome and tedious.
+      If the user wants to search the student hostel allotment number of a student from 10000 unsorted students’ records, how difficult it can be. 
+      Unauthorized Access: File Systems may lead to unauthorized access to data. If a student gets access to a file having his marks, he can change it in an unauthorized way.
+      No Concurrent Access: The access of the same data by multiple users at the same time is known as concurrency.
+      The file system does not allow concurrency as data can be accessed by only one user at a time.
+         No Backup and Recovery: The file system does not incorporate any backup and recovery of data if a file is lost or corrupted</p>
+    </section>
+    <section id="Advantages">
+      <h2>Advantages</h2>
+      <p>Advantages of DBMS
+        Data organization: A DBMS allows for the organization and storage of data in a structured manner, making it easy to retrieve and query the data as needed. Data integrity: A DBMS provides mechanisms for enforcing data integrity constraints, such as constraints on the values of data and access controls that restrict who can access the data. Concurrent access: A DBMS provides mechanisms for controlling concurrent access to the database, to ensure that multiple users can access the data without conflicting with each other. Data security: A DBMS provides tools for managing the security of the data, such as controlling access to the data and encrypting sensitive data. Backup and recovery: A DBMS provides mechanisms for backing up and recovering the data in the event of a system failure. Data sharing: A DBMS allows multiple users to access and share the same data, which can be useful in a collaborative work environment.</p>
+    </section>
+    <section id="sQl Learning Tips">
+      <h2>sQl Learning Tips</h2>
+      <p>SQL stands for Structured Query Language and is a computer language that we use to interact with a relational database. SQL is a tool for organizing, managing, and retrieving archived data from a computer database. The original name was given by IBM as Structured English Query Language, abbreviated by the acronym SEQUEL. When data needs to be retrieved from a database, SQL is used to make the request. The DBMS processes the SQL query retrieves the requested data and returns it to us. Rather, SQL statements describe how a collection of data should be organized or what data should be extracted or added to the database.
+
+      </p>
+      <br><h2>What are the characteristics of SQL?</h2></br>
+      <p>SQL may be utilized by quite a number of users, which include people with very little programming experience. SQL is a non-procedural language. We can without difficulty create and replace databases in SQL. It isn’t a time-consuming process. SQL is primarily based totally on ANSI standards. SQL does now no longer have a continuation individual. SQL is entered into the SQL buffer on one or more lines. SQL makes use of a termination individual to execute instructions immediately. It makes use of features to carry out a few formatting. It uses functions to perform some formatting.</p></br>
+    <br><h2>Uses of SQL</h2></br>
+    <p>Data definition: It is used to define the structure and organization of the stored data and the relationships among the stored data items. Data retrieval: SQL can also be used for data retrieval. Data manipulation: If the user wants to add new data, remove data, or modifying in existing data then SQL provides this facility also. Access control: SQL can be used to restrict a user’s ability to retrieve, add, and modify data, protecting stored data against unauthorized access. Data sharing: SQL is used to coordinate data sharing by concurrent users, ensuring that changes made by one user do not inadvertently wipe out changes made at nearly the same time by another user. SQL also differs from other computer languages because it describes what the user wants the computer to do rather than how the computer should do it. (In more technical terms, SQL is a declarative or descriptive language rather than a procedural one.) SQL contains no IF statement for testing conditions, and no GOTO, DO, or FOR statements for program flow control. Rather, SQL statements describe how a collection of data is to be organized, or what data is to be retrieved or added to the database. The sequence of steps to do those tasks is left for the DBMS to determine.</p>
+    </section>
+    <h2><a href="#sQl Functions">sQl Functions</a></h2>
+    <h2><a href="#sQl Statements">sQl Statements</a></h2>
+    <h2><a href="#Operators">Operators</a></h2>
+    <h2><a href="#sQl Clause">sQl Clause</a></h2>
+
+    <section id="psQl Learning Tips">
+      <h2>psQl Learning Tips</h2>
+      <p>L/SQL is a block structured language that enables developers to combine the power of SQL
+        with procedural statements.All the statements of a block are passed to oracle engine
+        all at once which increases processing speed and decreases the traffic.<br>
+        <h2>Basics of PL/SQL</h2><br>
+        •PL/SQL stands for Procedural Language extensions to the Structured Query Language (SQL).
+        PL/SQL is a combination of SQL along with the procedural features of programming languages.
+        Oracle uses a PL/SQL engine to processes the PL/SQL statements.
+        PL/SQL includes procedural language elements like conditions and loops. It allows
+        declaration of constants and variables, procedures and functions, types and variable of those types and triggers.<br>
+        <h2>Features of PL/SQL:</h2><br>
+PL/SQL is basically a procedural language, which provides the functionality of decision
+making, iteration and many more features of procedural programming languages.
+PL/SQL can execute a number of queries in one block using single command.
+One can create a PL/SQL unit such as procedures, functions, packages, triggers, and types,
+which are stored in the database for reuse by applications.
+PL/SQL provides a feature to handle the exception which occurs in PL/SQL block known as
+exception handling block.
+Applications written in PL/SQL are portable to computer hardware or operating system where
+Oracle is operational.
+PL/SQL Offers extensive error checking.<br>
+      </p>
+    </section>
+    <h2><a href="#Variables">Variables</a></h2>
+    <h2><a href="#Control Structures">Control Structures</a></h2>
+    <h2><a href="#Functions">Functions</a></h2>
+    <h2><a href="#Cursors">Cursors</a></h2>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; Sudiksha ROLL NO.4314/22. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Playway</title>
+  <style>
+    /* CSS styles for the body, header, navigation, and main content */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #ffcc00;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav {
+      background-color: #333;
+      text-align: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px;
+      display: inline-block;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-image: <img src = "C:\Users\DELL\Desktop\download.jpg"; /* Specify the path to your image */
+      background-size: cover; /* Cover the entire background */
+      background-position: center; /* Center the background image */
+      background-repeat: no-repeat; /* Do not repeat the background image */
+    }
+
+
+    }
+    section {
+      margin-bottom: 20px;
+    }
+    h1, h2 {
+      color: #333;
+      text-align: center;
+    }
+    p {
+      line-height: 1.5;
+    }
+    .fun-activities {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .fun-activity {
+      width: calc(33.33% - 20px);
+      margin: 10px;
+      padding: 20px;
+      background-color: #ff9966;
+      border-radius: 5px;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      color: #777;
+      padding: 10px;
+      font-size: 14px;
+      background-color: #333;
+      color: #fff;
+      clear: both;
+    }
+  </style>
+  </head>
+  <body>
+    <section id="sQl Functions">
+    <h2>sQl Functions</h2>
+    <p><br><h4>MIN Function</h4></br>
+      <br>The MIN function returns the smallest value in a set of values.</br>
+      <br>  SELECT MIN(salary) AS min_salary FROM employees;</br>
+          
+      <br><h4>MAX Function</h4></br>
+      <br>The MAX function returns the largest value in a set of values.</br>
+      <br>SELECT MAX(salary) AS max_salary FROM employees;<br>
+          
+      <br><h4>COUNT Function</h4></br>
+      <br>The COUNT function returns the number of rows that match a specified condition.</br>
+      <br>SELECT COUNT(*) AS total_employees FROM employees;</br>
+          
+      <br><h4>AVG Function</h4></br>
+      <br>The AVG function returns the average value of a numeric column.</br>
+      <br>SELECT AVG(salary) AS avg_salary FROM employees;</br>
+          
+      <br><h4>SUM Function</h4></br>
+      <br>The SUM function returns the total sum of a numeric column.</br>
+      <br>SELECT SUM(sales_amount) AS total_sales FROM sales;</br>
+          
+      <br><h4>IFNULL Function</h4></br>
+      <br>The IFNULL function returns a specified value if the expression is NULL, otherwise returns the expression itself.</br>
+      <br>SELECT IFNULL(commission, 0) AS commission_amount FROM sales;</br>
+          </p></section>
+      <section id="sQl Statements">
+            <h2>sQl Statements</h2>
+            <p><br><h4>CREATE DATABASE Statement</h4></br>
+              <br>The CREATE DATABASE statement is used to create a new database in MySQL.</br>
+              <br>CREATE DATABASE mydatabase;</br>
+                  
+              <br><h4>DROP DATABASE Statement</h4></br>
+              <br>The DROP DATABASE statement is used to delete an existing database in MySQL.</br>
+              <br>DROP DATABASE mydatabase;</br>
+                  
+              <br><h4>CREATE TABLE Statement</h4></br>
+              <br>The CREATE TABLE statement is used to create a new table in MySQL.</br>
+              <br>CREATE TABLE users (
+                      id INT AUTO_INCREMENT PRIMARY KEY,
+                      username VARCHAR(50) NOT NULL,
+                      email VARCHAR(100) NOT NULL
+              );</br>
+      
+              <br><h4>DROP TABLE Statement</h4></br>
+              <br>The DROP TABLE statement is used to delete an existing table in MySQL.</br>
+              <br>DROP TABLE users;</br>
+                  
+              <br><h4>TRUNCATE TABLE Statement</h4></br>
+              <br>The TRUNCATE TABLE statement is used to remove all records from a table, but the table structure remains intact.</br>
+              <br>TRUNCATE TABLE users;</br>
+                  
+              <h4>ALTER TABLE Statement</h4><br>
+              The ALTER TABLE statement is used to modify an existing table in MySQL, including adding, dropping, or modifying columns.<br>
+              ALTER TABLE users ADD COLUMN age INT;<br>
+                  
+              <h4>INSERT INTO Statement</h4><br>
+              The INSERT INTO statement is used to add new records into a table in MySQL.<br>
+              INSERT INTO users (username, email) VALUES ('john_doe', 'john@example.com');<br>
+                  
+              <h4>SELECT Statement</h4><br>
+              The SELECT statement is used to retrieve data from one or more tables in MySQL.<br>
+              SELECT * FROM users WHERE age > 18;<br>
+                  
+              <h4>UPDATE Statement</h4><br>
+              The UPDATE statement is used to modify existing records in a table in MySQL.<br>
+              UPDATE users SET age = 30 WHERE id = 1;<br>
+                  
+              <h4>DELETE Statement</h4><br>
+              The DELETE statement is used to remove existing records from a table in MySQL.<br>
+              DELETE FROM users WHERE id = 1;<br>
+                  
+  <h4>GROUP BY Statement</h4><br>
+  The GROUP BY statement is used to group rows that have the same values into summary rows in MySQL.<br>
+  SELECT department, COUNT(*) FROM employees GROUP BY department;<br>
+                 
+  <h4>CASE Statement<br>
+  The CASE statement is used to create conditional logic in SQL queries in MySQL.<br>
+   SELECT
+   CASE 
+   WHEN age < 18 THEN 'Child'
+  WHEN age >= 18 AND age < 65 THEN 'Adult'
+  ELSE 'Senior'
+  END AS age_group
+   FROM users;<br>
+                  
+  <h4>CREATE INDEX Statement</h4><br>
+  The CREATE INDEX statement is used to create an index on a table in MySQL, which improves query performance.<br>
+  CREATE INDEX idx_username ON users (username);<br>
+               
+  <h4>CREATE VIEW Statement</h4>
+   The CREATE VIEW statement is used to create a virtual table based on the result of a SELECT query in MySQL.<br>
+   CREATE VIEW active_users AS SELECT * FROM users WHERE status = 'active';<br>
+           
+   <h4>Alias</h4><br>
+   An alias is a temporary name assigned to a table or column in MySQL, which is used to make column names more readable or to rename tables.<br>
+   SELECT username AS 'User', email AS 'Email' FROM users;<br>
+   </p></section>
+
+   <section id="Operators">
+    <h2>Operators</h2>
+    <p><h4>AND Operator</h4><br>
+      The AND operator is used to combine multiple conditions in a WHERE clause, and all conditions must be true for the row to be included in the result set.<br>
+      
+            SELECT * FROM employees WHERE age > 30 AND department = 'HR';<br>
+          
+      <h4>OR Operator</h4><br>
+      The OR operator is used to combine multiple conditions in a WHERE clause, and at least one condition must be true for the row to be included in the result set.<br>
+      
+            SELECT * FROM products WHERE category = 'Electronics' OR category = 'Appliances';<br>
+          
+      <h4>NOT Operator</h4>
+      The NOT operator is used to negate a condition in a WHERE clause, returning rows that do not meet the specified condition.<br>
+      
+            SELECT * FROM customers WHERE NOT age > 21;<br>
+          
+      <h4>IS NULL Operator</h4><br>
+      The IS NULL operator is used to check if a column contains a NULL value.<br>
+      
+            SELECT * FROM orders WHERE shipping_address IS NULL;<br>
+          
+      <h4>IS NOT NULL Operator</h4><br>
+      The IS NOT NULL operator is used to check if a column does not contain a NULL value.<br>
+      
+            SELECT * FROM employees WHERE email IS NOT NULL;<br>
+          
+      <h4>NOT Operator</h4>
+      The NOT operator is used to negate a condition in a WHERE clause, returning rows that do not meet the specified condition.<br>
+      
+            SELECT * FROM customers WHERE NOT age > 21;<br>
+          
+      <h4>IS NULL Operator</h4><br>
+      The IS NULL operator is used to check if a column contains a NULL value.<br>
+      
+            SELECT * FROM orders WHERE shipping_address IS NULL;<br>
+          
+      <h4>IS NOT NULL Operator</h4><br>
+      The IS NOT NULL operator is used to check if a column does not contain a NULL value.<br>
+      
+            SELECT * FROM employees WHERE email IS NOT NULL;<br>
+          
+      <h4>LIKE Operator</h4>
+      The LIKE operator is used to search for a specified pattern in a column.<br>
+      
+            SELECT * FROM products WHERE product_name LIKE 'Apple%';<br>
+          
+      <h4>IN Operator</h4><br>
+      The IN operator is used to specify multiple values in a WHERE clause.<br>
+      
+            SELECT * FROM customers WHERE country IN ('USA', 'Canada', 'UK');<br>
+          
+      <h4>BETWEEN Operator</h4><br>
+      The BETWEEN operator is used to select values within a specified range.<br>
+      
+            SELECT * FROM orders WHERE order_date BETWEEN '2022-01-01' AND '2022-12-31';<br>
+          
+      <h4>UNION Operator</h4><br>
+      The UNION operator is used to combine the result sets of two or more SELECT statements.<br>
+      
+            SELECT product_name FROM products WHERE category = 'Electronics'
+            UNION
+            SELECT product_name FROM products WHERE category = 'Appliances';<br>
+          
+      <h4>EXISTS Operator</h4><br>
+      The EXISTS operator is used to test for the existence of any rows in a subquery.<br>
+      
+            SELECT * FROM orders WHERE EXISTS (SELECT * FROM customers WHERE customers.customer_id = orders.customer_id);<br>
+          
+      <h4>ANY Operator</h4><br>
+      The ANY operator is used to compare a value to any value in a list or returned by a subquery.<br>
+      
+            SELECT * FROM products WHERE price > ANY (SELECT price FROM competitors);<br>
+          
+      <h4>ALL Operator</h4><br>
+      The ALL operator is used to compare a value to every value in a list or returned by a subquery.<br>
+      
+            SELECT * FROM products WHERE price > ALL (SELECT price FROM competitors);<br>
+          </p></section>
+          <section id="sQl Clause">
+            <h2>sQl Clause</h2>
+            <p><h4>WHERE Clause</h4><br>
+              The WHERE clause is used to filter records based on specified conditions.<br>
+              
+                    SELECT * FROM users WHERE age > 18;<br>
+                  
+              <h4>LIMIT Clause</h4><br>
+              The LIMIT clause is used to limit the number of records returned in a query result.<br>
+              
+                    SELECT * FROM products LIMIT 5;<br>
+                  
+              <h4>HAVING Clause</h4><br>
+              The HAVING clause is used to filter the results of aggregate functions applied to grouped data.<br>
+              
+                    SELECT category, AVG(price) AS average_price FROM products GROUP BY category HAVING AVG(price) > 100;<br>
+                  
+              <h4>ORDER BY Clause</h4><br>
+              The ORDER BY clause is used to sort the result set in ascending or descending order.<br>
+              
+                    SELECT * FROM products ORDER BY price DESC;<br>
+                  
+              <h4>JOIN Clause</h4><br>
+              The JOIN clause is used to combine rows from two or more tables based on a related column between them.<br>
+              
+                    SELECT orders.order_id, customers.name FROM orders JOIN customers ON orders.customer_id = customers.customer_id;<br>
+                  </p></section>
+                  <section id="Variables">
+                    <h2>Variables</h2>
+                    <p><h4>Variable Declaration</h4><br>
+                      Variables are declared using the DECLARE keyword. They hold data values that can be manipulated during the execution of a PL/SQL block.<br>
+                      
+                            DECLARE
+                              employee_name VARCHAR2(50);
+                              employee_salary NUMBER;
+                            BEGIN
+                              -- statements
+                            END;<br>
+                          
+                      <h4>Constant Declaration</h4><br>
+                      Constants are declared using the CONSTANT keyword. They hold values that cannot be changed during the execution of a PL/SQL block.<br>
+                      
+                            DECLARE
+                              PI CONSTANT NUMBER := 3.14159;
+                            BEGIN
+                              -- statements
+                            END;<br>
+                          
+                      <h4>Variable Attributes</h4><br>
+                      PL/SQL variables can have various attributes like data type declaration, row type, and initialization.<br>
+                      
+                            DECLARE
+                              emp_record employees%ROWTYPE;
+                              total_sales NUMBER(10,2) := 0;
+                            BEGIN
+                              -- statements
+                            END;<br>
+                          
+                      <h4>Nested Blocks</h4><br>
+                      PL/SQL allows nesting of blocks within blocks. Inner blocks can access variables declared in outer blocks.<br>
+                      
+                            DECLARE
+                              outer_variable NUMBER := 10;
+                            BEGIN
+                              DECLARE
+                                inner_variable NUMBER := 20;
+                              BEGIN
+                                -- statements
+                              END;
+                            END;<br>
+                          </p></section>
+
+                          <section id="Control Structures">
+                            <p><h4>Control Structures</h4>
+                             <h4> IF THEN Statement</h4><br>
+The IF THEN statement executes a block of code if a condition is true.<br>
+
+      IF condition THEN
+        -- statements
+      END IF;<br>
+    
+<h4>IF THEN ELSE Statement</h4><br>
+The IF THEN ELSE statement executes one block of code if a condition is true and another block if it is false.<br>
+
+      IF condition THEN
+        -- statements
+      ELSE
+        -- statements
+      END IF;<br>
+    
+<h4>IF THEN ELSE IF Statement</h4><br>
+The IF THEN ELSE IF statement executes different blocks of code based on multiple conditions.<br>
+
+      IF condition1 THEN
+        -- statements
+      ELSIF condition2 THEN
+        -- statements
+      ELSE
+        -- statements
+      END IF;<br>
+    
+<h4>EXIT Loop Statement</h4><br>
+The EXIT WHEN statement is used to exit a loop based on a condition.<br>
+
+      LOOP
+        -- statements
+        EXIT WHEN condition;
+        -- more statements
+      END LOOP;<br>
+    
+<h4>WHILE Loop Statement</h4><br>
+The WHILE LOOP statement executes a block of code repeatedly while a condition is true.<br>
+
+      WHILE condition LOOP
+        -- statements
+      END LOOP;<br>
+    
+<h4>FOR Loop Statement (Reverse)</h4><br>
+The FOR LOOP statement executes a block of code a specified number of times, using the REVERSE keyword to iterate in reverse order.<br>
+
+      FOR i IN REVERSE lower_bound..upper_bound LOOP
+        -- statements
+      END LOOP;<br>
+    
+<h4>GOTO Statement</h4><br>
+The GOTO statement transfers control to a labeled statement in the same block.<br>
+
+      <>
+      GOTO label_name;<br>
+    
+   </p>
+  </section>
+
+  <section id="Functions">
+    <p><h4>Functions</h4><br>
+      <h4>Create a Function</h4><br>
+      A function is created using the CREATE FUNCTION statement.<br>
+      
+            CREATE OR REPLACE FUNCTION get_employee_name(emp_id NUMBER)
+            RETURN VARCHAR2
+            IS
+              emp_name VARCHAR2(100);
+            BEGIN
+              SELECT first_name INTO emp_name FROM employees WHERE employee_id = emp_id;
+              RETURN emp_name;
+            END;<br>
+          
+      <h4>Function Calling</h4><br>
+      A function can be called from other PL/SQL blocks or functions.<br>
+      
+            DECLARE
+              emp_id NUMBER := 100;
+              emp_full_name VARCHAR2(200);
+            BEGIN
+              emp_full_name := get_employee_name(emp_id);
+              DBMS_OUTPUT.PUT_LINE('Employee Full Name: ' || emp_full_name);
+            END;<br>
+          
+      <h4>Recursive Function</h4><br>
+      A recursive function calls itself either directly or indirectly.<br>
+      
+            CREATE OR REPLACE FUNCTION factorial(n NUMBER)
+            RETURN NUMBER
+            IS
+            BEGIN
+              IF n = 0 THEN
+                RETURN 1;
+              ELSE
+                RETURN n * factorial(n - 1);
+              END IF;
+            END;<br>
+          
+      <h4>Drop a Function</h4><br>
+      A function can be dropped from the database using the DROP FUNCTION statement.
+      
+            DROP FUNCTION get_employee_name;<br>
+          
+    
+    </p>
+  </section>
+
+  <section id="Cursors">
+    <p><h4>Cursors</h4>
+      <h4>Cursors are essential constructs that allow us to work with query results row by row. </h4><br>
+      Here’s what you need to know:<br>
+  
+
+
+
+<h4> Implicit Cursors:</h4><br>
+  Implicit cursors are automatically created by PL/SQL when executing SQL statements.<br>
+  They manage the result set of a query without explicit declaration.<br>
+  Common scenarios for implicit cursors include INSERT, UPDATE, and DELETE operations.<br>
+
+<h5>Key attributes:</h5><br>
+  %FOUND: True if the most recent SQL operation affected at least one row.
+  %NOTFOUND: True if no rows were affected.
+  %ROWCOUNT: Returns the number of rows affected.
+  %ISOPEN: Checks if the cursor is open.<br>
+
+
+ <h4>Explicit Cursors:<h4><br>
+
+  Explicit cursors are created by users when needed.
+  They allow fetching data from a table row by row.
+  Steps to create an explicit cursor:<br>
+
+  <h5>declare cursor object:</h5><br>
+  
+DECLARE cursor_name CURSOR FOR SELECT * FROM table_name;<br>
+  
+
+
+  <h5>open cursor:</h5><br>
+  
+OPEN cursor_name;<br>
+  
+
+  <h4>Fetch Data from the Cursor (Methods):</h4><br>
+  *FIRST: Fetch the first row.
+  *LAST: Fetch the last row.
+  *NEXT: Fetch data in a forward direction.
+  *PRIOR: Fetch data in a backward direction.
+  *ABSOLUTE n: Fetch the exact nth row.
+  *RELATIVE n: Fetch data incrementally or decrementally.<br>
+
+  <h4>close cursor:</h4><br>
+  
+CLOSE cursor_name;<br>
+  
+
+  <h4>dealocate cursor:</h4><br>
+  
+DEALLOCATE cursor_name;<br>
+  
+
+
+
+<h4> example of implicit cursor:</h4><br>
+BEGIN
+FOR emp_rec IN SELECT * FROM emp LOOP
+  DBMS_OUTPUT.PUT_LINE('Employee name: ' || emp_rec.ename);
+END LOOP;
+END;<br>
+
+
+
+<h4> example of explicit cursor:</h4><br>
+
+DECLARE
+s1 CURSOR FOR SELECT * FROM studDetails;
+BEGIN
+OPEN s1;
+FETCH FIRST FROM s1;
+FETCH LAST FROM s1;
+-- Other fetch methods...
+CLOSE s1;
+END;<br>
+
+
+
+    </p>
+  </section>
+          
+
+
+        
+        
+</body>
+</html>
